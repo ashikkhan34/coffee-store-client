@@ -1,5 +1,6 @@
 import React from 'react';
 import Swal from 'sweetalert2'
+import Navbar from './Navbar';
 
 
 const AddCoffee = () => {
@@ -42,6 +43,7 @@ const AddCoffee = () => {
     }
     return (
         <form onSubmit={handleAddCoffee}>
+            <Navbar></Navbar>
             <div className=' mx-auto bg-gray-900 mt-10 rounded-2xl w-2/3 p-7'>
                 <div className='md:flex gap-6  justify-center mx-auto bg-gray-900  rounded-2xl '>
                     <div className='w-2/3'>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import Navbar from './Navbar';
 
 const UpdateCoffee = () => {
     const coffee = useLoaderData()
@@ -45,6 +46,7 @@ const UpdateCoffee = () => {
     }
     return (
         <div>
+            <Navbar></Navbar>
               <form onSubmit={handleUpdateCoffee}>
             <div className=' mx-auto bg-gray-900 mt-10 rounded-2xl w-2/3 p-7'>
                 <div className='md:flex gap-6  justify-center mx-auto bg-gray-900  rounded-2xl '>

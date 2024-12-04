@@ -24,7 +24,7 @@ const CoffeeCard = ({ coffee,coffees,setCoffees }) => {
                     .then(res => res.json())
                     .then(data => {
                         console.log(data)
-                        if (data.deletedCount > 0) {
+                        if (data.deletedCount) {
                             Swal.fire({
                                 title: "Deleted!",
                                 text: "You're coffee TEMPhas been deleted.",
@@ -42,9 +42,10 @@ const CoffeeCard = ({ coffee,coffees,setCoffees }) => {
             <div className="card card-side bg-base-100 shadow-xl ">
                 <figure>
                     <img
+                    className='w-40 '
                         src={photo} />
                 </figure>
-                <div className="w-full flex justify-between ">
+                <div className="w-full flex justify-between ml-11 ">
                     <div>
                         <h2 className="card-title">{name}</h2>
                         <p>{quantity}</p>
